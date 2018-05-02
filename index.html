@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>Dota2 Emoji nickname - by @l4w.io</title>
+<meta charset=utf-8>
+<style>
+input {
+	width: 500px;
+	font-family:"Consolas",mono;
+}
+#nickname {
+	height: 40px;
+}
+h1,h3{
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+pre {
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+</style>
+</head>
+
+<body>
+<!--
+Please don't copy/re-up it. This is my own work.
+Thanks.
+-->
+<pre>
+<center>
+
+<img src=img/demo1.png>
+
+<h1>Dota2 Emoji nickname</h1>
+
+Click on emoji(s) you want put in your nickname (less than 4)
+then click on below <font color='#4CAF50'><b>Copy</b></font> button, then paste it into your steam nickname (The weird symbol  is emoji).
+Example: <a target='_blank' href='https://steamcommunity.com/id/ML_CLGT/'>https://steamcommunity.com/id/ML_CLGT/</a>
+Enjoy!
+
+<input type=text maxlength=32 id=nickname placeholder="Enter your nickname here ( < 32 characters )">
+<input type=button class=button value="Copy" onclick="nickname.select(); document.execCommand('Copy'); alert('Copied! Now paste it into your steam nickname');">
+
+<div id=emoji></div>
+
+<h3 style="color: #3c3c3c;">by <a target='_blank' href='//l4w.io'>@l4wio</a></h3>
+</pre>
+</center>
+
+
+</body>
+
+
+<script>
+	var max_emoji = 0xd4;
+	var n = 1;
+	for(var i = 1; i < max_emoji ; i++){
+		let x = document.createElement('img');
+		let code = i.toString(16).padStart(2,"0");
+		x.src = 'img/'+code+'.gif';
+		x.setAttribute('onclick',"nickname.value += '"+unescape('%ue0'+code)+"';");
+		emoji.appendChild(x); emoji.innerHTML+= "\t";
+		if(n++ % 15 == 0) emoji.innerHTML += "\n";
+	}
+
+</script>
+
+</html>
+
