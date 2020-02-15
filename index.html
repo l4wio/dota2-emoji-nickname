@@ -2,10 +2,14 @@
 <head>
 <title>Dota2 Emoji nickname - by @l4w.io</title>
 <meta charset=utf-8>
+<link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
 <style>
+body{
+  font-family:"Tomorrow",mono;
+}
 input {
 	width: 500px;
-	font-family:"Consolas",mono;
+	font-family:"Tomorrow",mono;
 }
 #nickname {
 	height: 40px;
@@ -34,6 +38,14 @@ pre {
 img {
  cursor: -webkit-grab; cursor: grab;
 }
+.description {
+  font-family: "Tomorrow" !important;
+  font-size: 14px;
+}
+.emoji {
+  border: #535353 2.5px solid;
+  padding-bottom: 30px;
+}
 </style>
 </head>
 
@@ -42,31 +54,50 @@ img {
 Please don't copy/re-up it. This is my own work.
 Thanks.
 -->
-<pre>
+
 <center>
 
 <img src=img/demo1.png>
-
+<br /><br />
 <h1>Dota2 Emoji nickname</h1>
-
-Click on emoji(s) you want put in your nickname (less than 5)
-then click on below <font color='#4CAF50'><b>Copy</b></font> button, then paste it into your steam profile name (The weird symbol  is emoji).
+<br /><br />
+<div class=description>
+Click on emoji(s) you want put in your nickname (4 emojis are allowed)
+then click on below <font color='#4CAF50'><b>Copy</b></font> button<br />
+then paste it into your steam profile name (The weird symbol  is an emoji).
+<br />
 Example: <a target='_blank' href='https://steamcommunity.com/id/ML_CLGT/'>https://steamcommunity.com/id/ML_CLGT/</a>
-Go to "DEMO HERO" in DOTA 2 GAME then test (resume/pause) it (<font color='red'>Emojis can be displayed in-game only</font>)
+<br />
+----
+<br/>
+<i>Update 02/15/2020: New emojis has been added, see below</i>
+<br/>
+----
+<br />
+(<font color='red'><b></b>Emojis can be displayed in-game only</b></font>)<br />
+There are several places where these emojis can be displayed: <br />
+1. When you hit resume/pause during a game <br />
+2. DotaTV chat box while you watching a game <br />
+3. ... Unknown<br />
+(please leave a comment on YouTube if you found other places)
+<br /><br />
 Enjoy!
-
+</div>
+<br /><br />
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WTFIHZ6Etk0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<br /><br />
 
-
-<input type=text maxlength=32 id=nickname placeholder="Enter your nickname here ( < 32 characters )">
+<input type=text maxlength=32 id=nickname placeholder="Enter your nickname here ( < 32 characters )"><br />
 <input type=button class=button value="Copy" onclick="nickname.select(); document.execCommand('Copy'); alert('Copied! Now paste it into your steam nickname');">
+<pre>
+<div id=emoji class=emoji>
 
-<div id=emoji></div>
-
-<h3 style="color: #3c3c3c;">by <a target='_blank' href='//l4w.io'>@l4wio</a> | <a target=_blank href='https://github.com/l4wio/dota2-emoji-nickname/'>Source</a></h3>
-<!-- <iframe src='//l4w.pw/visit_counter.php' height=50 width=50 frameborder=0></iframe> /* no longer needed */ --> 
+</div>
 </pre>
+<h3 style="color: #3c3c3c;">by <a target='_blank' href='//l4w.io'>@l4wio</a> | <a target=_blank href='https://github.com/l4wio/dota2-emoji-nickname/'>Source</a></h3>
+<!-- <iframe src='//l4w.pw/visit_counter.php' height=50 width=50 frameborder=0></iframe> /* no longer needed */ -->
+
 </center>
 
 
@@ -74,7 +105,7 @@ Enjoy!
 
 
 <script>
-	var max_emoji = 0xd4;
+	var max_emoji = 0xdc;
 	var n = 1;
 	for(var i = 1; i < max_emoji ; i++){
 		let x = document.createElement('img');
