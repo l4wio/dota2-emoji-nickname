@@ -110,7 +110,7 @@ Enjoy!
 	for(var i = 1; i < max_emoji ; i++){
 		let x = document.createElement('img');
 		let code = i.toString(16).padStart(2,"0");
-		x.src = 'img/'+code+'.gif';
+		x.src = 'https://raw.githubusercontent.com/l4wio/dota2-emoji-nickname/master/img/'+code+'.gif';
 		x.setAttribute('onclick',"nickname.value += '"+unescape('%ue0'+code)+"';");
 		emoji.appendChild(x); emoji.innerHTML+= "\t";
 		if(n++ % 15 == 0) emoji.innerHTML += "\n";
